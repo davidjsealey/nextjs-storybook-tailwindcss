@@ -1,19 +1,18 @@
 const Button = ({ href, styles, disabled, label }) => {
   let classes = [
     "py-2",
-    "px-4",
-    "shadow-md",
-    "no-underline",
+    "px-8",
     "rounded-full",
-    "font-sans",
-    "font-semibold",
-    "text-sm",
     "border",
     "border-blue-500",
-    "btn-primary",
     "focus:outline-none",
+    "shadow-md",
     "active:shadow-none",
     "mr-2",
+    "text-sm",
+    "no-underline",
+    "font-sans",
+    "font-semibold",
   ];
 
   if (disabled === true) {
