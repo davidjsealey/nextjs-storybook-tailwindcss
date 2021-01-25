@@ -1,5 +1,5 @@
 const Button = ({ href, styles, disabled, label }) => {
-  const classes = [
+  let classes = [
     "py-2",
     "px-4",
     "shadow-md",
@@ -15,6 +15,11 @@ const Button = ({ href, styles, disabled, label }) => {
     "active:shadow-none",
     "mr-2",
   ];
+
+  if (disabled === true) {
+    const disabledClasses = ["opacity-50", "pointer-events-none"];
+    classes = [...classes, ...disabledClasses];
+  }
 
   return <button
     href={`${href}`}
