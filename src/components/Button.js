@@ -1,7 +1,5 @@
 const Button = ({ href, styles, disabled, label }) => {
   let classes = [
-    "py-2",
-    "px-8",
     "rounded-full",
     "border",
     "focus:outline-none",
@@ -20,7 +18,7 @@ const Button = ({ href, styles, disabled, label }) => {
   }
 
   return <button
-    href={`${href}`}
+    href={href}
     className={`${styles} ${classes.join(' ')}`}
     disabled={disabled}>{label}</button>;
 };

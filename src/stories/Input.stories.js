@@ -14,8 +14,8 @@ export default {
 
 const Template = args => <Input {...args} />;
 
-export const textInput = Template.bind({});
-textInput.args = {type: 'text'};
+export const text = Template.bind({});
+text.args = {type: 'text', placeholder: "Name"};
 
-export const emailInput = Template.bind({});
-emailInput.args = {type: 'email'};
+export const email = Template.bind({});
+email.args = {type: 'email', placeholder: "Email"};

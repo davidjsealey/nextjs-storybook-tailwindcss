@@ -1,4 +1,4 @@
-const Input = ({ type }) => {
+const Input = ({ type, placeholder }) => {
     const classes = [
         'border',
         'border-gray-100',
@@ -17,7 +17,7 @@ const Input = ({ type }) => {
                 type={type} 
                 name="" 
                 id="" 
-                placeholder="Enter text" />
+                placeholder={placeholder} />
         </div>
     )
 }
