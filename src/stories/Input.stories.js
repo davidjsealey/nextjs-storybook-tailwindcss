@@ -1,7 +1,7 @@
-import Input from '../components/Input'
+import Input from '../components/atoms/Input'
 
 export default {
-    title: 'Components/Forms/Input',
+    title: 'Components/Atoms/Input',
     component: Input,
     argTypes: {
         type: {
@@ -17,5 +17,5 @@ const Template = args => <Input {...args} />;
 export const Text = Template.bind({});
 Text.args = {type: 'text', placeholder: "Name"};
 
-export const Emal = Template.bind({});
-Emal.args = {type: 'email', placeholder: "Email"};
+export const Email = Template.bind({});
+Email.args = {type: 'email', placeholder: "Email"};

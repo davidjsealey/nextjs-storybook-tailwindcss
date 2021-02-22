@@ -1,7 +1,7 @@
-import Counter from '../components/Counter';
+import Counter from '../components/atoms/Counter';
 
 export default {
-    title: 'Components/Counter',
+    title: 'Components/Atoms/Counter',
     component: Counter,
 }
 
