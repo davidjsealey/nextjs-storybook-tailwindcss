@@ -1,5 +1,6 @@
 const Button = ({ href, styles, disabled, label }) => {
   let classes = [
+    "inline",
     "rounded-full",
     "border",
     "focus:outline-none",

@@ -5,22 +5,35 @@ export default {
     component: Counter,
 }
 
-const Template = args => <Counter {...args} />;
-
-export const Active = Template.bind({});
-Active.args = { 
+const baseArgs = {
     currentCount: 1,
     maxCount: 10
 };
 
-Active.argTypes = {
-    currentCount: {
-        control: { 
-            type: 'number', 
-            min: Active.args.currentCount, 
-            max: Active.args.maxCount
-        },
-    }
+export const Active = args => <Counter variant="active" {...args} />;
+export const Inactive = args => <Counter variant="inactive" {...args} />;
+
+Active.args = { 
+    currentCount: 1,
+    maxCount: 10,
+};
+
+Inactive.args = {
+    maxCount: Active.args.maxCount,
+};
+
+const baseArgTypes = {
+    variant: {
+        table: {
+          disable: true
+        }
+    },
 }
 
-export const Inactive = () => <Counter currentCount={0} maxCount={Active.args.maxCount} />;
+Active.argTypes = {
+    ...baseArgTypes
+}
+
+Inactive.argTypes = {
+    ...baseArgTypes
+}
