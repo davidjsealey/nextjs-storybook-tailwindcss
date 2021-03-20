@@ -12,10 +12,17 @@ export default {
     }
 }
 
-const Template = args => <Input {...args} />;
+export const Text = args => <Input variant='text' {...args} />
+export const Email = args => <Input variant='email' {...args} />
 
-export const Text = Template.bind({});
-Text.args = {type: 'text', placeholder: "Name"};
+Text.args = {
+    type: 'text', 
+    value: 'Joan Smith',
+    placeholder: "Enter Text"
+}
 
-export const Email = Template.bind({});
-Email.args = {type: 'email', placeholder: "Email"};
+Email.args = {
+    type: 'email',
+    value: 'test@test.com', 
+    placeholder: "Enter Email Address"
+}
