@@ -1,7 +1,7 @@
-import Back from '../components/atoms/Back'
+import Back from '../../components/atoms/Back'
 
 export default {
-    title: 'Components/Atoms/Back',
+    title: 'Atoms/Back',
     component: Back
 }
 

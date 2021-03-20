@@ -1,14 +1,9 @@
-import Counter from '../components/atoms/Counter';
+import Counter from '../../components/atoms/Counter';
 
 export default {
-    title: 'Components/Atoms/Counter',
+    title: 'Atoms/Counter',
     component: Counter,
 }
-
-const baseArgs = {
-    currentCount: 1,
-    maxCount: 10
-};
 
 export const Active = args => <Counter variant="active" {...args} />;
 export const Inactive = args => <Counter variant="inactive" {...args} />;

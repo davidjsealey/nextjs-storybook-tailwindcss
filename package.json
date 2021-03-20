@@ -10,6 +10,8 @@
     "storybook:build": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^6.1.21",
+    "@storybook/addon-storysource": "^6.1.21",
     "@tailwindcss/postcss7-compat": "^2.0.2",
     "autoprefixer": "^9.8.6",
     "next": "10.0.5",
@@ -19,10 +21,10 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^6.1.18",
-    "@storybook/addon-essentials": "^6.1.18",
-    "@storybook/addon-links": "^6.1.18",
-    "@storybook/react": "^6.1.18",
+    "@storybook/addon-actions": "^6.1.21",
+    "@storybook/addon-essentials": "^6.1.21",
+    "@storybook/addon-links": "^6.1.21",
+    "@storybook/react": "^6.1.21",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-preset-env": "^6.7.0"
   }
