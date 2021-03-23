@@ -3,6 +3,13 @@ import Button from '../../components/atoms/Button';
 export default {
   title: 'Atoms/Button',
   component: Button,
+  argTypes: {
+    variant: {
+      table: {
+        disable: true
+      }
+    }
+  }
 }
 
 export const Primary = args => <Button variant='primary' {...args} />;
@@ -21,20 +28,4 @@ Primary.args = {
 Secondary.args = {
   label: 'Complete',
   ...baseArgs
-}
-
-const baseArgTypes = {
-  variant: {
-      table: {
-        disable: true
-      }
-  },
-}
-
-Primary.argTypes = {
-  ...baseArgTypes
-}
-
-Secondary.argTypes = {
-  ...baseArgTypes
 }
