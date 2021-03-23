@@ -5,4 +5,6 @@ export default {
     component: Header
 }
 
-export const Default = () => <Header />;
+export const Default = () => <Header variant='default' />;
+export const Survey = () => <Header variant='survey' />;
+export const Counter = () => <Header variant='counter' />;
