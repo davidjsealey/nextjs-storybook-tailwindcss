@@ -1,5 +1,5 @@
-import { useState } from 'react'
 import PropTypes from 'prop-types'
+import { useState } from 'react'
 
 const classes = [
     'border',
@@ -12,8 +12,11 @@ const classes = [
     'text-gray-500'
 ];
 
-const InputText = ({ type, value, placeholder }) => {
-
+const Input = ({
+    type = 'text',
+    value,
+    placeholder
+}) => {
     const [inputValue, setInputValue] = useState(value);
 
     const handleChange = event => {
@@ -21,49 +24,14 @@ const InputText = ({ type, value, placeholder }) => {
     }
 
     return (
-        <div>
-            <input 
-                className={`${classes.join(' ')}`} 
-                type={type} 
-                name="" 
-                id=""
-                value={inputValue}
-                placeholder={placeholder}
-                onChange={handleChange} />
-        </div>
+        <input
+            className={`${classes.join(' ')}`} 
+            type={type}
+            value={inputValue}
+            placeholder={placeholder}
+            onChange={handleChange}
+        />
     )
-}
-
-const InputEmail = ({ type, value, placeholder }) => {
-
-    const [inputValue, setInputValue] = useState(value);
-
-    const handleChange = event => {
-        setInputValue(event.target.value);
-    }
-
-    return (
-        <div>
-            <input 
-                className={`${classes.join(' ')}`} 
-                type={type} 
-                name="" 
-                id="" 
-                value={inputValue}
-                placeholder={placeholder} 
-                onChange={handleChange} />
-        </div>
-    )
-}
-
-const Input = props => {
-
-    switch (props.variant.toLowerCase()) {
-        case 'email':
-            return <InputEmail {...props} />;
-        default:
-            return <InputText {...props} />;
-    }
 }
 
 Input.propTypes = {
