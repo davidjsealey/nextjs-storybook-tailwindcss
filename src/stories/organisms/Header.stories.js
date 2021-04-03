@@ -14,4 +14,21 @@ export default {
 
 export const Default = () => <Header variant='default' />;
 export const Survey = () => <Header variant='survey' />;
-export const Counter = () => <Header variant='counter' />;
+export const Counter = args => <Header variant='counter' {...args} />;
+
+Counter.args = { 
+    currentCount: 1,
+    maxCount: 10,
+};
+
+const baseArgTypes = {
+    variant: {
+        table: {
+          disable: true
+        }
+    },
+}
+
+Counter.argTypes = {
+    ...baseArgTypes
+}

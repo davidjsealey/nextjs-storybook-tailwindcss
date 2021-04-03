@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import ProgressBar from '../atoms/ProgressBar'
 import Back from '../atoms/Back'
 import Logo from '../atoms/Logo'
 import Counter from '../atoms/Counter'
@@ -21,22 +22,25 @@ const HeaderSurvey = () => (
     </header>
 )
 
-const HeaderCounter = () => (
+const HeaderCounter = ({ currentCount, maxCount }) => (
     <header className={`${classes.join(' ')}`}>
-        <Back />
-        <Logo />
-        <Counter currentCount={0} maxCount={10} variant={'inactive'} />
+        <ProgressBar currentCount={currentCount} maxCount={maxCount} />
+        <div>
+            <Back />
+            <Logo />
+            <Counter currentCount={currentCount} maxCount={maxCount} variant={'inactive'} />
+        </div>
     </header>
 )
 
-const Header = ({ variant }) => {
+const Header = ({ variant, currentCount, maxCount }) => {
 
     switch (variant.toLowerCase()) {
         case 'survey':
             return <HeaderSurvey />
             break;
         case 'counter':
-            return <HeaderCounter />
+            return <HeaderCounter currentCount={currentCount} maxCount={maxCount} />
             break;
         default:
             return <HeaderDefault />
