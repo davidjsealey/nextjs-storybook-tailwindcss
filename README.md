@@ -1,3 +1,13 @@
+# Project details
+
+📕   This is a test project to learn the basics of StorybookJS, whilst working with NextJS and TailwindCSS.  📕 
+
+<br />
+
+---
+
+<br />
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
